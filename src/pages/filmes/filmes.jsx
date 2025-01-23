@@ -3,7 +3,7 @@ import S from "./filmes.module.scss";
 function Filmes() {
   return (
     <main>
-      <h1>hi</h1>
+      <h1>Filmes</h1>
     </main>
   );
 }
