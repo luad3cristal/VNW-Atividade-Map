@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  width: 100vw;
+  padding: 20px 40px;
+  gap: 15px;
+
+  background-color: var(--color-5);
+  color: wheat;
+
+  section {
+    font-family: "Fraunces", sans-serif;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 35px;
+    }
+  }
+
+  nav {
+    min-width: 300px;
+    width: 60%;
+    max-width: 500px;
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+          color: wheat;
+
+          font-family: "Fraunces", sans-serif;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

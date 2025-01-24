@@ -6,10 +6,16 @@ import Filmes from "../pages/filmes/filmes";
 import Series from "../pages/series/series";
 import Inicio from "../pages/inicio/inicio";
 
+import logo from "../assets/logo.png";
+
 function Header() {
   return (
     <BrowserRouter>
-      <header>
+      <header className={S.header}>
+        <section className={S.logo}>
+          <img src={logo} alt="logo do site" />
+          <h2>my favorites</h2>
+        </section>
         <nav>
           <ul>
             <li>
