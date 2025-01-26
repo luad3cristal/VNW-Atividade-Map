@@ -1,9 +1,7 @@
 import S from "./header.module.scss";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Livros from "../pages/livros/livros";
-import Filmes from "../pages/filmes/filmes";
-import Series from "../pages/series/series";
+import Conteudo from "../pages/conteudo/conteudo";
 import Inicio from "../pages/inicio/inicio";
 
 import logo from "../assets/logo.png";
@@ -30,9 +28,9 @@ function Header() {
 
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/livros" element={<Livros />} />
-        <Route path="/filmes" element={<Filmes />} />
-        <Route path="/series" element={<Series />} />
+        <Route path="/livros" element={<Conteudo texto="livros" />} />
+        <Route path="/filmes" element={<Conteudo texto="filmes" />} />
+        <Route path="/series" element={<Conteudo texto="series" />} />
       </Routes>
     </BrowserRouter>
   );
