@@ -158,7 +158,7 @@ function Conteudo({ texto }) {
               </div>
             </section>
           ))}
-        {texto === "series" &&
+        {texto === "séries" &&
           series.map((serie) => (
             <section key={serie.titulo} className={S.content_container}>
               <img src={serie.img} alt={serie.alt} />

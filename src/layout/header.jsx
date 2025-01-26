@@ -30,7 +30,7 @@ function Header() {
         <Route path="/" element={<Inicio />} />
         <Route path="/livros" element={<Conteudo texto="livros" />} />
         <Route path="/filmes" element={<Conteudo texto="filmes" />} />
-        <Route path="/series" element={<Conteudo texto="series" />} />
+        <Route path="/series" element={<Conteudo texto="séries" />} />
       </Routes>
     </BrowserRouter>
   );
