@@ -16,7 +16,7 @@ function Conteudo({ texto }) {
       titulo: "Torto Arado",
       descrição:
         "Nas profundezas do sertão baiano, as irmãs Bibiana e Belonísia encontram uma velha e misteriosa faca na mala guardada sob a cama da avó. Ocorre então um acidente. E para sempre suas vidas estarão ligadas ― a ponto de uma precisar ser a voz da outra. Numa trama conduzida com maestria e com uma prosa melodiosa, o romance conta uma história de vida e morte, de combate e redenção.",
-      avaliação: "⭐⭐⭐⭐",
+      avaliação: "⭐⭐⭐⭐⭐",
     },
     {
       img: "https://m.media-amazon.com/images/I/81BTkpMrLYL._AC_UF1000,1000_QL80_.jpg",
@@ -87,6 +87,57 @@ function Conteudo({ texto }) {
     },
   ];
 
+  const filmes = [
+    {
+      img: "https://br.web.img3.acsta.net/medias/nmedia/18/87/89/74/19962669.jpg",
+      alt: "filme A princesa e o sapo",
+      titulo: "A princesa e o sapo",
+      descrição:
+        "A Princesa e o Sapo é um filme de animação musical que reimagina o clássico conto de fadas. A história se passa na Nova Orleans dos anos 20 e acompanha Tiana, uma jovem determinada que sonha em abrir seu próprio restaurante. Após um beijo acidental, ela se transforma em uma rã e embarca em uma aventura mágica ao lado do príncipe Naveen, que também foi transformado em um anfíbio. Juntos, eles enfrentam desafios e descobrem o verdadeiro significado da felicidade.",
+      avaliação: "⭐⭐⭐⭐⭐",
+    },
+    {
+      img: "https://m.media-amazon.com/images/I/818JVooHpJL._AC_UF894,1000_QL80_.jpg",
+      alt: "filme Capitão Fantástico",
+      titulo: "Capitão Fantástico",
+      descrição:
+        "Capitão Fantástico é um drama que acompanha um pai dedicado, Ben, que decide criar seus seis filhos em uma floresta isolada, longe da civilização moderna. Ben os educa em casa, ensinando-lhes sobre sobrevivência, filosofia e a importância de questionar o status quo. Quando uma tragédia familiar os força a retornar à sociedade, a família precisa se adaptar a um mundo que eles mal conhecem.",
+      avaliação: "⭐⭐⭐⭐⭐",
+    },
+    {
+      img: "https://upload.wikimedia.org/wikipedia/pt/4/4f/Frozen_2_poster.jpg",
+      alt: "filme Frozen 2",
+      titulo: "Frozen 2",
+      descrição:
+        "Frozen 2 é uma continuação da animação de sucesso da Disney. A história se concentra em Elsa, a Rainha de Arendelle, que busca descobrir a origem de seus poderes e a voz que a chama de além das montanhas. Junto com Anna, Kristoff, Olaf e Sven, ela embarca em uma jornada épica para desvendar os mistérios de seu passado e proteger seu reino.",
+      avaliação: "⭐⭐⭐⭐⭐",
+    },
+    {
+      img: "https://static.wixstatic.com/media/5801fd_3ee4e2cc6c6142fa8570cbd29a3fd352~mv2.jpg/v1/fill/w_568,h_798,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5801fd_3ee4e2cc6c6142fa8570cbd29a3fd352~mv2.jpg",
+      alt: "filme Escritores da Liberdade",
+      titulo: "Escritores da Liberdade",
+      descrição:
+        "Escritores da Liberdade é um drama baseado em fatos reais que se passa em uma escola de Los Angeles com um alto índice de criminalidade. A professora Erin Gruwell inspira seus alunos, em sua maioria de minorias, a expressar seus sentimentos e experiências através da escrita. Através de seus diários, os alunos exploram temas como racismo, violência e esperança, encontrando uma voz e um propósito.",
+      avaliação: "⭐⭐⭐⭐⭐",
+    },
+    {
+      img: "https://ingresso-a.akamaihd.net/prd/img/movie/avatar-o-caminho-das-aguas/048d74f1-9e5e-4ade-8652-a9630106c935.jpg",
+      alt: "filme Avatar 2",
+      titulo: "Avatar 2",
+      descrição:
+        "Avatar 2 é uma continuação da épica aventura em Pandora. Jake Sully, agora totalmente integrado ao povo Na'vi, retorna com sua família para proteger seu lar. No entanto, novas ameaças surgem, e a família Sully precisa unir forças com outras clãs Na'vi para defender seu mundo.",
+      avaliação: "⭐⭐⭐⭐⭐",
+    },
+    {
+      img: "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg",
+      alt: "filme Harry Potter",
+      titulo: "Harry Potter - A saga",
+      descrição:
+        "Harry Potter é uma saga épica de fantasia que acompanha a vida de um jovem bruxo, Harry Potter, que descobre que é o único sobrevivente de um ataque mortal de Lord Voldemort. Harry é enviado para a Escola de Magia e Bruxaria de Hogwarts, onde faz amigos, enfrenta perigos e se prepara para a batalha final contra o Lorde das Trevas.",
+      avaliação: "⭐⭐⭐⭐⭐",
+    },
+  ];
+
   return (
     <main className={S.main}>
       {texto === "livros" || texto === "filmes" ? (
@@ -96,7 +147,8 @@ function Conteudo({ texto }) {
       )}
 
       <article>
-        {texto == "livros" && livros.map((livro) => (
+        {texto === "livros" &&
+          livros.map((livro) => (
             <section key={livro.titulo} className={S.content_container}>
               <img src={livro.img} alt={livro.alt} />
               <div className={S.content_box}>
@@ -106,7 +158,8 @@ function Conteudo({ texto }) {
               </div>
             </section>
           ))}
-        {texto == "series" && series.map((serie) => (
+        {texto === "series" &&
+          series.map((serie) => (
             <section key={serie.titulo} className={S.content_container}>
               <img src={serie.img} alt={serie.alt} />
               <div className={S.content_box}>
@@ -116,7 +169,8 @@ function Conteudo({ texto }) {
               </div>
             </section>
           ))}
-        {texto == "filmes" && filmes.map((filme) => (
+        {texto === "filmes" &&
+          filmes.map((filme) => (
             <section key={filme.titulo} className={S.content_container}>
               <img src={filme.img} alt={filme.alt} />
               <div className={S.content_box}>
